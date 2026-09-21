@@ -11,7 +11,9 @@ import HyperlocalMap from './components/HyperlocalMap';
 import SkillGapAnalyzer from './components/SkillGapAnalyzer';
 import VoiceAssistantModal from './components/VoiceAssistantModal';
 import GovtFooter from './components/GovtFooter';
+import IVRSection from './components/IVRSection';
 import { translations } from './data/translations';
+
 import { Mic, WifiOff } from 'lucide-react';
 
 export default function App() {
@@ -116,8 +118,12 @@ export default function App() {
               onNavigate={setActiveTab}
               onOpenVoiceBot={() => setIsVoiceOpen(true)}
             />
+
+            {/* IVR Helpline Section */}
+            <IVRSection lang={lang} t={t} />
           </div>
         )}
+
 
         {activeTab === 'skilling' && (
           <NSQFCatalog
